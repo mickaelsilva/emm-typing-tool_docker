@@ -23,6 +23,7 @@ ENV PATH="/NGStools/bowtie2-2.2.9:$PATH"
 RUN wget https://sourceforge.net/projects/samtools/files/samtools/0.1.19/samtools-0.1.19.tar.bz2
 RUN mkdir samtools && tar jxf samtools-0.1.19.tar.bz2 -C samtools --strip-components=1
 WORKDIR /NGStools/samtools/
+RUN ./configure --without-curses --disable-bz2 --disable-lzma
 RUN make
 ENV PATH="/NGStools/samtools:$PATH"
 
