@@ -13,6 +13,7 @@ RUN apt-get update && apt-get -y install \
 	wget  \
 	unzip \
 	python \
+	python-pip \
 	parallel \
 	libncurses5-dev \
 	libncursesw5-dev \
