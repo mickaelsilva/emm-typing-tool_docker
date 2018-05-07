@@ -53,3 +53,5 @@ RUN sh edit_allele_file.sh
 
 WORKDIR /NGStools/
 RUN emm_typing.py -h
+
+RUN apt-get -y install emboss
