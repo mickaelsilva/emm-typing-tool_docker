@@ -42,7 +42,7 @@ RUN mkdir reference
 WORKDIR /NGStools/reference/
 RUN wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/006/785/GCF_000006785.2_ASM678v2/GCF_000006785.2_ASM678v2_genomic.fna.gz && gunzip ./*.gz
 RUN makeblastdb -in GCF_000006785.2_ASM678v2_genomic.fna -dbtype nucl  -out reference
-COPY GCF_000006785.2_ASM678v2_genomic.fna reference.seq
+RUN mv GCF_000006785.2_ASM678v2_genomic.fna reference.seq
 
 WORKDIR /NGStools/
 RUN mkdir EMM_data
